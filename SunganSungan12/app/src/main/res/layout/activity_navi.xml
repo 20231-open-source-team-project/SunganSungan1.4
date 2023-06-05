@@ -1,69 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--조정동 담당-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <ImageButton
             android:id="@+id/homeButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_home"
-            android:background="@android:color/transparent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:padding="8dp" />
-
-        <TextView
-            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="물품 검색"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:src="@drawable/ic_home" />
 
-    </RelativeLayout>
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="게시글 검색"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="8dp" />
 
-    <!-- 물품 목록 RecyclerView -->
-    <EditText
-        android:id="@+id/searchEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="검색어를 입력하세요"
-        android:imeOptions="actionSearch"
-        android:inputType="text"
-        android:padding="10dp" />
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/itemRecyclerView"
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/postListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="30dp" />
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:numColumns="1"
+        android:scrollbars="vertical" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/naviButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="물품 검색"
-        android:textColor="@android:color/white"
-        android:backgroundTint="#000000"
-        android:textSize="18sp"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:background="@drawable/button_background" />
-
-    <View
+    <TextView
+        android:id="@+id/emptyTextView"
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        android:layout_height="wrap_content"
+        android:text="게시글이 없습니다."
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:visibility="gone" />
 
 </LinearLayout>

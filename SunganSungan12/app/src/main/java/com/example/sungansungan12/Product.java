@@ -1,5 +1,5 @@
 package com.example.sungansungan12;
-
+//강수 담당
 public class Product {
     private String name;
     private String price;

@@ -1,5 +1,5 @@
 package com.example.sungansungan12;
-
+//강수 담당
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 

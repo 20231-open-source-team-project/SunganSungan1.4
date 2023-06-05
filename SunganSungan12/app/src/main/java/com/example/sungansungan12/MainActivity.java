@@ -1,4 +1,6 @@
 package com.example.sungansungan12;
+//강수 담당 ver1.4
+
 
 import androidx.appcompat.app.AppCompatActivity;
 

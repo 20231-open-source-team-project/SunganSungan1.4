@@ -1,4 +1,5 @@
 package com.example.sungansungan12;
+//강수 담당
 
 //서비스 사용에 사용할 유저정보
 public class User {

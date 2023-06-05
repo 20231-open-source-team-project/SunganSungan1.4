@@ -1,5 +1,5 @@
 package com.example.sungansungan12;
-
+//강수 담당
 
 //파이어베이스 고유 유저 식별자 발급용도
 public class UserAccount {
